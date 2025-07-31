@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What are the three main ways to end a marriage or domestic partnership in California?",
+    "expected_answer": "In California, there are three main ways to end a marriage or domestic partnership: divorce (also called dissolution), legal separation, and annulment."
+  },
+  {
+    "question": "What is the difference between a divorce and a legal separation?",
+    "expected_answer": "A divorce legally ends your marriage or domestic partnership, allowing you to remarry or enter a new domestic partnership. A legal separation does not end your marriage or domestic partnership - you remain married but live apart and cannot remarry or enter into a domestic partnership with someone else."
+  },
+  {
+    "question": "What is an annulment and when is it granted?",
+    "expected_answer": "An annulment (or nullity) is when a court declares that your marriage or domestic partnership was never legally valid. Annulments are difficult to prove and rarely granted. Grounds include: petitioner's age at time of marriage, prior existing marriage, unsound mind, fraud, force, or physical incapacity."
+  },
+  {
+    "question": "What are the residency requirements for filing for divorce in San Francisco?",
+    "expected_answer": "You or your spouse must physically live in San Francisco for at least the last three months, and in California for at least the last six months at the time of filing your case."
+  },
+  {
+    "question": "Do you need your spouse's consent to file for divorce in California?",
+    "expected_answer": "No, either party can file for a divorce, legal separation, or annulment. You do not need your spouse or domestic partner's consent or agreement to file."
+  },
+  {
+    "question": "What does it mean that California is a 'no fault' divorce state?",
+    "expected_answer": "California is a 'no fault' divorce state, which means you do not need to prove someone did something wrong. You just have to state that you cannot get along with the other party, which is legally called 'irreconcilable differences.'"
+  },
+  {
+    "question": "What is a summary dissolution and who qualifies for it?",
+    "expected_answer": "A summary dissolution is a simpler way to get divorced for couples who meet ALL specific requirements: married less than 5 years, no children together, don't own real estate, owe less than $7,000 in debts (excluding car loans), have less than $53,000 in community property, no separate property worth more than $53,000 (excluding cars), agree to waive spousal support, and have a signed agreement dividing property and debts."
+  },
+  {
+    "question": "How soon can you become single after filing for divorce?",
+    "expected_answer": "The soonest you can become single is 6 months and a day from the time the other party was served with your divorce papers. However, you must complete all required steps to finish your case."
+  },
+  {
+    "question": "What is the difference between community property and separate property in California?",
+    "expected_answer": "Community property is any asset or debt acquired during the marriage (from date of marriage to date of separation) and is usually divided equally in divorce. Separate property is generally any asset or debt acquired before marriage or after separation and is not typically divided in divorce."
+  },
+  {
+    "question": "Are financial disclosures required in all divorce cases?",
+    "expected_answer": "Yes, you are required to complete and exchange financial disclosures with the other party within 60 days of filing your case. This preliminary declaration of disclosure is MANDATORY and cannot be waived, even if both parties agree to do so."
+  },
+  {
+    "question": "What forms are needed to start a divorce case in San Francisco?",
+    "expected_answer": "You need Form FL-100 (Petition), Form FL-110 (Summons), and Form SFUFC 11.17 (local form). If you have minor children, you also need Form FL-105 (UCCJEA) and Form FL-311 (Child Custody and Visitation Application Attachment)."
+  },
+  {
+    "question": "How long do you have to respond to a divorce petition?",
+    "expected_answer": "You must file a Response with the court within 30 days after you were served. If you do not file a Response within 30 days, the court may make orders based on the requests in the Petition."
+  },
+  {
+    "question": "What happens if your spouse doesn't respond to the divorce petition?",
+    "expected_answer": "If your spouse fails to respond to your Petition, you can ask the Court to find your spouse in default, which means you can ask the Court to make the orders you requested without input from your spouse."
+  },
+  {
+    "question": "Can you ask for temporary orders while your divorce is pending?",
+    "expected_answer": "Yes, you can ask the court to make pendente lite (temporary) orders once you file your case. You don't need to wait until your divorce is finalized to request orders for issues like child custody, support, or spousal support."
+  },
+  {
+    "question": "What is the Family Centered Case Resolution (FCCR) calendar?",
+    "expected_answer": "If you do not finish your case within 18 months from when you filed (no judgment), the Court will mail you a letter with a court date for an FCCR hearing. The purpose is to ensure cases are moving along in a timely manner."
+  },
+  {
+    "question": "Can you use a P.O. Box address on your court forms in San Francisco?",
+    "expected_answer": "Yes, but if you plan to use a P.O. Box address on your forms, you should file form SFUFC 11.9A (P.O. Box). You are not required to put your residential address on court forms, only a secure mailing address."
+  },
+  {
+    "question": "What is the date of separation and why is it important?",
+    "expected_answer": "The date of separation is when there is a complete and final break in the marital relationship, determined by one spouse expressing intent to end the marriage and conduct consistent with that intent. It's important because anything acquired after this date is generally considered separate property rather than community property."
+  },
+  {
+    "question": "Can you cancel a summary dissolution after filing?",
+    "expected_answer": "You cannot cancel once a judgment is entered. However, before judgment, you can file Form FL-830 (Notice of Revocation) and mail a copy to the other party. You don't need the other party's signature to revoke."
+  },
+  {
+    "question": "What happens if you don't complete financial disclosures?",
+    "expected_answer": "You cannot get divorced if you do not complete your financial disclosures. If you leave assets or debts out of your paperwork, your property division order may be set aside (canceled), and the court may order that undisclosed property goes to your former spouse."
+  },
+  {
+    "question": "How long does it typically take to receive your judgment after submission?",
+    "expected_answer": "On average, it can take 8-12 weeks to receive your judgment paperwork in the mail after submitting all required forms for an uncontested case."
+  }
+]
