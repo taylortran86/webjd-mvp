@@ -5,9 +5,6 @@ from legal_chatbot_test.chat_history import append_message_to_history, load_chat
 from legal_chatbot_test.agent import agent
 
 
-
-
-
 def messages_to_agent_input(msgs: List[BaseMessage]):
     return {
         "messages": [
