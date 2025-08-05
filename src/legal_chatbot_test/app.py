@@ -5,10 +5,10 @@ import traceback
 from pathlib import Path
 import json
 import uvicorn
-from pydantic import BaseModel
 
-import ingest
-import chatbot
+from legal_chatbot_test.models import ChatMessage
+from legal_chatbot_test import ingest
+from legal_chatbot_test import chatbot
 
 API_TOKEN = "biYapSTfLMp65cQX1vQljL04pyfIpmuSCTyOtCpEWF57K4ciBpsYH60IyaYUPBBj"
 
@@ -29,8 +29,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class ChatMessage(BaseModel):
-    message: str
+
 
 @app.get("/")
 def index():
