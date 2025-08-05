@@ -1,9 +1,11 @@
-from flask import Flask, request, jsonify, abort
-from flask_cors import CORS
+from fastapi import FastAPI, Request, Header, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import traceback
 from pathlib import Path
 import json
+import uvicorn
+from pydantic import BaseModel
 
 import ingest
 import chatbot
@@ -11,38 +13,44 @@ import chatbot
 API_TOKEN = "biYapSTfLMp65cQX1vQljL04pyfIpmuSCTyOtCpEWF57K4ciBpsYH60IyaYUPBBj"
 
 load_dotenv()
-app = Flask(__name__)
+app = FastAPI()
 CHAT_HISTORY_FILE = Path(__file__).parent / "chat.txt"
-CORS(app, resources={r"/api/*": {"origins": [
+
+origins = [
     "https://59d176777d77.ngrok-free.app",
-    "https://thepointergroup.retool.com"
-]}})
+    "https://thepointergroup.retool.com",
+]
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-@app.route('/')
+class ChatMessage(BaseModel):
+    message: str
+
+@app.get("/")
 def index():
     print("Received request at /")
     return "Hello, World!"
 
-@app.route("/api/chat", methods=["POST"])
-def chat():
-    auth_header = request.headers.get("Authorization")
-    if auth_header != f"Bearer {API_TOKEN}":
-        abort(403)
+@app.post("/api/chat")
+async def chat(message: ChatMessage, authorization: str = Header(None)):
+    if authorization != f"Bearer {API_TOKEN}":
+        raise HTTPException(status_code=403, detail="Forbidden")
 
-    data = request.json
-    if not data:
-        return jsonify({"error": "Missing JSON body"}), 400
-    user_message = data.get("message", "")
+    user_message = message.message
     response = chatbot.get_chatbot_response(user_message)
-    return jsonify({"status": "success", "response": response})
+    return {"status": "success", "response": response}
 
 
-@app.route("/api/get_chat_history", methods=["GET"])
-def get_chat_history():
-    auth_header = request.headers.get("Authorization")
-    if auth_header != f"Bearer {API_TOKEN}":
-        abort(403)
+@app.get("/api/get_chat_history")
+def get_chat_history(authorization: str = Header(None)):
+    if authorization != f"Bearer {API_TOKEN}":
+        raise HTTPException(status_code=403, detail="Forbidden")
 
     if not CHAT_HISTORY_FILE.exists():
         return []
@@ -56,9 +64,8 @@ def get_chat_history():
         return history
     except Exception as e:
         traceback.print_exc()
-        return jsonify({"status": "error", "message": str(e)}), 500
+        raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5050)
-    # app.run(debug=True, port=5050)
+    uvicorn.run(app, host="0.0.0.0", port=5050)
 
